@@ -10,7 +10,7 @@ odds = [x for x in squares if x % 2 != 0 ]  # fill the list with calculated valu
 print(odds)
 
 # create a 2D list array
-board = [["-" for i in range(8)] for j in range(8)]  # this is very cool use of nexted list comprehension
+board = [["-" for i in range(8)] for j in range(8)]  # this is very cool use of nested list comprehension
 print(board)
 
 # create a chess board and place rooks in corners
