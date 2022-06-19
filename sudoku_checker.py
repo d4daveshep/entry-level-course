@@ -1,9 +1,9 @@
-import pytest
+# import pytest
 
 
 def check_unique_9(group):
     for i in range(9):
-        digit = str(i+1)
+        digit = str(i + 1)
         if digit not in group:
             return False
     return True
@@ -37,7 +37,9 @@ def is_valid_sudoku(grid):
     cells = ["" for i in range(9)]
     for i in range(9):
         for j in range(9):
-            cell_num = (j // 3) + 3 * (i//3) #  this took me ages to get this right - stop using trial and error and figure it out mathimatically
+            cell_num = (j // 3) + 3 * (
+                        i // 3)     # this took me ages to get this right - stop using trial and error and figure it out
+                                    # mathematically
             digit = (rows[i])[j]
             cells[cell_num] += digit
             pass
@@ -46,15 +48,13 @@ def is_valid_sudoku(grid):
         if not check_unique_9(cell):
             return False
 
-
-
-
-
     return True
+
 
 def test_check_unique_9():
     assert check_unique_9("876192543")
     assert not check_unique_9("123456788")
+
 
 def test_is_valid_sudoku():
     valid_grid = [295743861,
@@ -78,3 +78,4 @@ def test_is_valid_sudoku():
                     254938671]
 
     assert is_valid_sudoku(invalid_grid) == False
+    assert is_valid_sudoku(valid_grid) == True
