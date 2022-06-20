@@ -6,6 +6,9 @@ y = {'b': 3, 'c': 4}
 
 z = {**x, **y}
 
+# z = x + y this won't work - raises a TypeError
+
+
 print(f"dictionary 1 is {x}")
 print(f"dictionary 2 is {y}")
 
