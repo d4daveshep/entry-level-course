@@ -1,13 +1,16 @@
 class SuperOne:
     pass
 
+
 class SuperTwo:
     pass
+
 
 class Sub(SuperOne, SuperTwo):
     pass
 
-def printBases(cls):
+
+def printBases(cls: object) -> object:
     print("(", end="")
     for x in cls.__bases__:
         print(x.__name__, end=" ")

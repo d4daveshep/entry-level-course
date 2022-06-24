@@ -1,4 +1,4 @@
-def read_int(prompt, min, max):
+def read_int(prompt: str, min: int, max: int) -> int:
 
     i = input(prompt)
     i = int(i)
