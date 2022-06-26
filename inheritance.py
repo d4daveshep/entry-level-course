@@ -1,12 +1,16 @@
 class SuperOne:
-    pass
+    var_a = 10
+    def func_a(self):
+        return 11
 
 
 class SuperTwo:
-    pass
+    var_b = 20
+    def func_b(self):
+        return 21
 
 
-class Sub(SuperOne, SuperTwo):
+class Sub(SuperOne, SuperTwo): # multiple inheritance
     pass
 
 
@@ -20,3 +24,7 @@ def printBases(cls: object) -> object:
 printBases(SuperOne)
 printBases(SuperTwo)
 printBases(Sub)
+
+obj = Sub()
+print(obj.var_a, obj.func_a())
+print(obj.var_b, obj.func_b())
