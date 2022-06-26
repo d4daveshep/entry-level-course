@@ -1,3 +1,5 @@
+# this is an example of a generator (aka iterator)
+# it implements the iterator protocol (not an interface or subclass)
 class Fibonacci:
     def __init__(self, number_to_generate):
         # print("__init__")
@@ -6,10 +8,11 @@ class Fibonacci:
         self.__previous_number_1 = self.__previous_number_2 = 1
 
     def __iter__(self):
-        # print("__iter__")
+        # returns a reference to the object
         return self
 
     def __next__(self):
+        # returns the next value in the sequence until a StopInteration is raised
         # print("__next__")
         self.__counter += 1
         if self.__counter > self.__number_to_generate:
