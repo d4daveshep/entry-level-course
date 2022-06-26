@@ -25,6 +25,21 @@ class Fibonacci:
         self.__previous_number_1, self.__previous_number_2 = self.__previous_number_2, return_value  # cool way to reassign two values at once
         return return_value
 
+class IteratorIncluded:
+    # a class that is composed of an iterator
+    def __init__(self,n):
+        self.__iterator = Fibonacci(n)
+
+    def __iter__(self):
+        return self.__iterator
+
 
 for i in Fibonacci(10):
     print(i, end=", ")
+
+print()
+
+fib = IteratorIncluded(10)
+for i in fib:
+    print(i, end=", ")
+
